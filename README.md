@@ -1,72 +1,57 @@
-DEFT
-=====
+# EviSEC: Evidential Spectrum-Aware Contrastive Learning for Out-of-Distribution Detection in Dynamic Graphs
 
-This repository contains the code for [Learnable Spectral Wavelets on Dynamic Graphs to Capture Global Interactions](https://arxiv.org/abs/2211.11979), published in AAAI 2023.
+## Abstract
+In this study, we explore **Out-of-Distribution Detection in Dynamic Graphs** and analyze it using **Evidential Deep Learning**. We employ the 6 datasets in three download task and implement our methods for a comprehensive analysis of results. Specifically, we propose EviSEC, an innovative and effective OOD detector via Evidential Spectrum-awarE Contrastive Learning. 
 
-## Data
+## Dataset
+6 datasets were used in the paper:
+|                     | **# Nodes** | **# Edges** | **# Time Splits** | **Task** |
+|---------------------|-------------|-------------|-------------------|----------|
+| BC-OTC              | 5,881       | 35,588      | 95 / 14 / 28       | Edge Classification|
+| BC-Alpha            | 3,777       | 24,173      | 95 / 13 / 28       | Edge Classification|
+| UCI                 | 1,899       | 59,835      | 62 / 9 / 17        | Link Prediction    | 
+| AS                  | 6,474       | 13,895      | 70 / 10 / 20       | Link Prediction    | 
+| Elliptic            | 203,769     | 234,355     | 31 / 5 / 13        | Node Classification| 
+| Brain               | 5,000       | 1,955,488   | 10 / 1 / 1         | Node Classification| 
 
-8 datasets were used in the paper:
+## Data Source
+Bitcoin OTC: Downloadable from http://snap.stanford.edu/data/soc-sign-bitcoin-otc.html
 
-- stochastic block model: Downloadable from https://github.com/IBM/EvolveGCN/tree/master/data
-- bitcoin OTC: Downloadable from http://snap.stanford.edu/data/soc-sign-bitcoin-otc.html
-- bitcoin Alpha: Downloadable from http://snap.stanford.edu/data/soc-sign-bitcoin-alpha.html
-- uc_irvine: Downloadable from http://konect.uni-koblenz.de/networks/opsahl-ucsocial
-- autonomous systems: Downloadable from http://snap.stanford.edu/data/as-733.html
-- reddit hyperlink network: Downloadable from http://snap.stanford.edu/data/soc-RedditHyperlinks.html
-- elliptic: Please see the [instruction](elliptic_construction.md) to manually prepare the preprocessed version or refer to the following repository that originally proposed the usage of the data: https://arxiv.org/abs/1902.10191
-- brain: Downloadable from https://www.dropbox.com/sh/33p0gk4etgdjfvz/AACe2INXtp3N0u9xRdszq4vua?dl=0
- 
+Bitcoin Alpha: Downloadable from http://snap.stanford.edu/data/soc-sign-bitcoin-alpha.html
+
+Uc_irvine: Downloadable from http://konect.uni-koblenz.de/networks/opsahl-ucsocial
+
+Autonomous Systems: Downloadable from http://snap.stanford.edu/data/as-733.html
+
+Elliptic: Please see the instruction to manually prepare the preprocessed version or refer to the following repository that originally proposed the usage of the data: https://arxiv.org/abs/1902.10191
+
+Brain: Downloadable from https://www.dropbox.com/sh/33p0gk4etgdjfvz/AACe2INXtp3N0u9xRdszq4vua?dl=0
+
 For downloaded data sets please place them in the 'data' folder.
 
-## Requirements
-  * PyTorch 1.0 or higher
-  * Python 3.6
+## Code Execution Method
 
-GPU availability is recommended to train the models. Otherwise, set the use_cuda flag in parameters.yaml to false.
+To reproduce this study, the following code execution methods were used:
 
-### Requirements
+### 1. Conda Environment Requirements
+- Python version: 3.6.13
+- Dependencies:
+  
+  ```$ conda create --name <env> python=3.6.13 --file environment.txt```
 
-- [install nvidia drivers](https://www.nvidia.com/Download/index.aspx?lang=en-us)
+  ```$ pip install -r requestment.txt```
 
-
-## Usage
-
-Set --config_file with a yaml configuration file to run the experiments. For example:
-
-```sh
-python run_exp.py --config_file ./experiments/parameters_example.yaml
-```
-
-Most of the parameters in the yaml configuration file are self-explanatory. 
-The 'experiments' folder contains config file for the results reported in the [DEFT paper](https://arxiv.org/abs/2211.11979).
-
-Setting 'use_logfile' to True in the configuration yaml will output a file, in the 'log' directory, containing information about the experiment and validation metrics for the various epochs. The file could be manually analyzed, alternatively 'log_analyzer.py' can be used to automatically parse a log file and to retrieve the evaluation metrics at the best validation epoch. For example:
-```sh
-python log_analyzer.py log/filename.log
-```
+  * if Command errored with "torch-sparse" and "torch_scatter", download them in https://pytorch-geometric.com/whl/torch-1.10.1%2Bcu113.html *
 
 
-## Reference
+### 2. Data Preprocessing
+- The code performs data preprocessing, including data OOD (SM and FI).
+- We already uploaded the processed data.
 
-[1] Anson Bastos, Abhishek Nadgeri, Kuldeep Singh, Toyotaro Suzumura, Manish Singh. [Learnable Spectral Wavelets on Dynamic Graphs to Capture Global Interactions](https://arxiv.org/abs/2211.11979). AAAI 2023.
-
-## BibTeX entry
-
-If you use our work kindly consider citing:
-
-
-```
-@misc{https://doi.org/10.48550/arxiv.2211.11979,
-  doi = {10.48550/ARXIV.2211.11979},
-  url = {https://arxiv.org/abs/2211.11979},
-  author = {Bastos, Anson and Nadgeri, Abhishek and Singh, Kuldeep and Suzumura, Toyotaro and Singh, Manish},
-  keywords = {Machine Learning (cs.LG), Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  title = {Learnable Spectral Wavelets on Dynamic Graphs to Capture Global Interactions},
-  publisher = {arXiv},
-  year = {2022},
-  copyright = {Creative Commons Attribution 4.0 International}
-}
-```
-
-## Acknowledgements
-This code has been adapted from [EvolveGCN](https://arxiv.org/abs/1902.10191). Many thanks to the authors for sharing the code.
+### 3. Usage (Our model uses `----EDL evisec` as part of the command line arguments.)
+ - ```
+   python run_exp.py --config_file ./experiments/EC_BTCAlpha.yaml --OOD FI
+   python run_exp.py --config_file ./experiments/EC_BTCAlpha.yaml --OOD SM
+   python run_exp.py --config_file ./experiments/EC_BTCAlpha.yaml --EDL evisec --OOD FI
+   python run_exp.py --config_file ./experiments/EC_BTCAlpha.yaml --EDL evisec --OOD SM
+   ```
