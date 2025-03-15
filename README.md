@@ -29,7 +29,8 @@ To reproduce this study, the following code execution methods were used:
 
 ### 1. Conda Environment Requirements
 - Python version: 3.6.13
-- Dependencies: use
+- Dependencies:
+  ```$ conda create --name <env> --file environment.txt```
 
 
 ### 2. Data Preprocessing
