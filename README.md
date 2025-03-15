@@ -1,7 +1,7 @@
 # EviSEC: Evidential Spectrum-Aware Contrastive Learning for Out-of-Distribution Detection in Dynamic Graphs
 
 ## Abstract
-In this study, we explore [Out-of-Distribution Detection in Dynamic Graphs] and analyze it using [Evidential Deep Learning]. We employ the 6 datasets in three download task and implement our methods for a comprehensive analysis of results.
+In this study, we explore *Out-of-Distribution Detection in Dynamic Graphs* and analyze it using *Evidential Deep Learning*. We employ the 6 datasets in three download task and implement our methods for a comprehensive analysis of results.
 
 ## Dataset
 6 datasets were used in the paper:
