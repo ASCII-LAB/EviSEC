@@ -46,7 +46,7 @@ To reproduce this study, the following code execution methods were used:
 
 ### 2. Data Preprocessing
 - The code performs data preprocessing, including data OOD (SM and FI).
-- We uploaded the processed data.
+- We already uploaded the processed data.
 
 ### 3. Usage (Our model uses `----EDL evisec` as part of the command line arguments.)
  - ```
