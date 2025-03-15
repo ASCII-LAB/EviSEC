@@ -1,0 +1,10 @@
+PyYaml
+numpy== 1.19.5
+scipy==1.5.4
+torch_geometric==2.0.3
+pygsp==0.5.1
+texttable==1.7.0
+matplotlib
+torch_sparse==0.6.12
+torch_scatter==2.0.9
+# if Command errored with "torch-sparse" and "torch_scatter", download them in https://pytorch-geometric.com/whl/torch-1.10.1%2Bcu113.html 
