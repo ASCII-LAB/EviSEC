@@ -7,12 +7,12 @@ In this study, we explore **Out-of-Distribution Detection in Dynamic Graphs** an
 6 datasets were used in the paper:
 |                     | **# Nodes** | **# Edges** | **# Time Splits** | **Task** |
 |---------------------|-------------|-------------|-------------------|----------|
-| BC-OTC              | 5,881       | 35,588      | 95 / 14 / 28       | EC       |
-| BC-Alpha            | 3,777       | 24,173      | 95 / 13 / 28       | EC       |
-| UCI                 | 1,899       | 59,835      | 62 / 9 / 17        | LP       | 
-| AS                  | 6,474       | 13,895      | 70 / 10 / 20       | LP       | 
-| Elliptic            | 203,769     | 234,355     | 31 / 5 / 13        | NC       | 
-| Brain               | 5,000       | 1,955,488   | 10 / 1 / 1         | NC       | 
+| BC-OTC              | 5,881       | 35,588      | 95 / 14 / 28       | Edge Classification|
+| BC-Alpha            | 3,777       | 24,173      | 95 / 13 / 28       | Edge Classification|
+| UCI                 | 1,899       | 59,835      | 62 / 9 / 17        | Link Prediction    | 
+| AS                  | 6,474       | 13,895      | 70 / 10 / 20       | Link Prediction    | 
+| Elliptic            | 203,769     | 234,355     | 31 / 5 / 13        | Node Classification| 
+| Brain               | 5,000       | 1,955,488   | 10 / 1 / 1         | Node Classification| 
 
 ## Data Source
 Bitcoin OTC: Downloadable from http://snap.stanford.edu/data/soc-sign-bitcoin-otc.html
