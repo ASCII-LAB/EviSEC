@@ -1,7 +1,7 @@
 # EviSEC: Evidential Spectrum-Aware Contrastive Learning for Out-of-Distribution Detection in Dynamic Graphs
 
 ## Abstract
-In this study, we explore *Out-of-Distribution Detection in Dynamic Graphs* and analyze it using *Evidential Deep Learning*. We employ the 6 datasets in three download task and implement our methods for a comprehensive analysis of results.
+In this study, we explore **Out-of-Distribution Detection in Dynamic Graphs** and analyze it using **Evidential Deep Learning**. We employ the 6 datasets in three download task and implement our methods for a comprehensive analysis of results. Specifically, we propose EviSEC, an innovative and effective OOD detector via Evidential Spectrum-awarE Contrastive Learning. 
 
 ## Dataset
 6 datasets were used in the paper:
@@ -15,17 +15,17 @@ In this study, we explore *Out-of-Distribution Detection in Dynamic Graphs* and 
 | Brain               | 5,000       | 1,955,488   | 10 / 1 / 1         | NC       | 
 
 ## Data Source
-bitcoin OTC: Downloadable from http://snap.stanford.edu/data/soc-sign-bitcoin-otc.html
+Bitcoin OTC: Downloadable from http://snap.stanford.edu/data/soc-sign-bitcoin-otc.html
 
-bitcoin Alpha: Downloadable from http://snap.stanford.edu/data/soc-sign-bitcoin-alpha.html
+Bitcoin Alpha: Downloadable from http://snap.stanford.edu/data/soc-sign-bitcoin-alpha.html
 
-uc_irvine: Downloadable from http://konect.uni-koblenz.de/networks/opsahl-ucsocial
+Uc_irvine: Downloadable from http://konect.uni-koblenz.de/networks/opsahl-ucsocial
 
-autonomous systems: Downloadable from http://snap.stanford.edu/data/as-733.html
+Autonomous Systems: Downloadable from http://snap.stanford.edu/data/as-733.html
 
-elliptic: Please see the instruction to manually prepare the preprocessed version or refer to the following repository that originally proposed the usage of the data: https://arxiv.org/abs/1902.10191
+Elliptic: Please see the instruction to manually prepare the preprocessed version or refer to the following repository that originally proposed the usage of the data: https://arxiv.org/abs/1902.10191
 
-brain: Downloadable from https://www.dropbox.com/sh/33p0gk4etgdjfvz/AACe2INXtp3N0u9xRdszq4vua?dl=0
+Brain: Downloadable from https://www.dropbox.com/sh/33p0gk4etgdjfvz/AACe2INXtp3N0u9xRdszq4vua?dl=0
 
 For downloaded data sets please place them in the 'data' folder.
 
