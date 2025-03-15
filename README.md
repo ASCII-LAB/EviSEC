@@ -49,7 +49,8 @@ To reproduce this study, the following code execution methods were used:
 - We uploaded the processed data.
 
 ### 3. Usage (Our model uses `----EDL evisec` as part of the command line arguments.)
- - ```python run_exp.py --config_file ./experiments/EC_BTCAlpha.yaml --OOD FI
+ - ```
+   python run_exp.py --config_file ./experiments/EC_BTCAlpha.yaml --OOD FI
    python run_exp.py --config_file ./experiments/EC_BTCAlpha.yaml --OOD SM
    python run_exp.py --config_file ./experiments/EC_BTCAlpha.yaml --EDL evisec --OOD FI
    python run_exp.py --config_file ./experiments/EC_BTCAlpha.yaml --EDL evisec --OOD SM
