@@ -27,8 +27,7 @@ Elliptic: Please see the instruction to manually prepare the preprocessed versio
 
 Brain: Downloadable from https://www.dropbox.com/sh/33p0gk4etgdjfvz/AACe2INXtp3N0u9xRdszq4vua?dl=0
 
-For downloaded data sets please place them in the 'data' folder. Elliptic can also be easily processed by `ell_preprocess.py`
-。
+For downloaded data sets please place them in the 'data' folder. Elliptic can also be easily processed by `ell_preprocess.py`.
 ## Code Execution Method
 
 To reproduce this study, the following code execution methods were used:
