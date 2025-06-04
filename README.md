@@ -1,6 +1,6 @@
 # EviSEC: Evidential Spectrum-Aware Contrastive Learning for Out-of-Distribution Detection in Dynamic Graphs
 ## 🔥 Update
-* [2024-5-26]: VCD is accepted by ECML 2025! (Acceptance Rate: 24%)
+* [2024-5-26]: EviSEC is accepted by ECML 2025! (Acceptance Rate: 24%)
 * [2025-6-20]: Paper of EviSEC online. Check out [this link]() for details.
 ## Abstract
 In this study, we explore **Out-of-Distribution Detection in Dynamic Graphs** and analyze it using **Evidential Deep Learning**. We employ the 6 datasets in three download task and implement our methods for a comprehensive analysis of results. Specifically, we propose EviSEC, an innovative and effective OOD detector via Evidential Spectrum-awarE Contrastive Learning. 
