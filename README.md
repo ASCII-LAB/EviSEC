@@ -42,12 +42,9 @@ To reproduce this study, the following code execution methods were used:
 
   ```$ pip install -r requestment.txt```
 
-  * if Command errored with "torch-sparse" and "torch_scatter", download them in https://pytorch-geometric.com/whl/torch-1.10.1%2Bcu113.html *
-
 
 ### 2. Data Preprocessing
 - The code performs data preprocessing, including data OOD (SM and FI).
-- We already uploaded the processed data.
 
 ### 3. Usage (Our model uses `----EDL evisec` as part of the command line arguments.)
  - ```
